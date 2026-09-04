@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PassGen - Password Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Main Card -->
+    <main class="container">
+
+        <div class="logo">
+            <div class="lock">🔐</div>
+        </div>
+
+        <h1>Password Generator</h1>
+
+        <p class="subtitle">
+            Create strong and secure passwords instantly
+        </p>
+
+        <!-- Password Display -->
+        <div class="password-box">
+
+            <input type="text" id="password" value="Click Generate" readonly>
+
+            <button id="copyBtn" title="Copy Password">
+                📋
+            </button>
+
+        </div>
+
+        <!-- Copy Message -->
+        <div id="copyMessage">
+            Password copied!
+        </div>
+
+        <!-- Strength -->
+        <div class="strength-section">
+
+            <div class="strength-info">
+                <span>Password Strength</span>
+                <span id="strengthText">Medium</span>
+            </div>
+
+            <div class="strength-bar">
+                <div id="strengthFill"></div>
+            </div>
+
+        </div>
+
+        <!-- Length -->
+        <div class="setting">
+
+            <div class="setting-header">
+                <span>Password Length</span>
+                <span id="lengthValue">16</span>
+            </div>
+
+            <input type="range" id="length" min="6" max="32" value="16">
+
+        </div>
+
+        <!-- Options -->
+        <div class="options">
+
+            <label class="option">
+                <input type="checkbox" id="uppercase" checked>
+                <span class="custom-check">✓</span>
+                <span>Uppercase Letters</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="lowercase" checked>
+                <span class="custom-check">✓</span>
+                <span>Lowercase Letters</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="numbers" checked>
+                <span class="custom-check">✓</span>
+                <span>Numbers</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="symbols" checked>
+                <span class="custom-check">✓</span>
+                <span>Symbols</span>
+            </label>
+
+        </div>
+
+        <!-- Generate -->
+        <button id="generateBtn">
+            <span>⚡</span>
+            Generate Password
+        </button>
+
+        <p class="footer">
+            Your password is generated locally 🔒
+        </p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
